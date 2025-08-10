@@ -12,6 +12,7 @@ Neste repositório, serão adicionados todos os arquivos das atividades realizad
 
 ## Instalação
 Passos para instalar e configurar o projeto:
+#Teste
 
 ```Bash
 git clone https://...../.git

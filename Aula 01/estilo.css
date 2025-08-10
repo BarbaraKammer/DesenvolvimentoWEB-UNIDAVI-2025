@@ -1,0 +1,28 @@
+.formulario{
+    width: 100px;
+    padding: 10px; 
+    margin: auto;/*centraliza o formulario(tabela)*/
+}
+
+
+table,td,th{
+    border: 1px solid black;
+    padding: 5px;
+    border-collapse: collapse;
+    margin: auto;/*centraliza o formulario(tabela)*/
+}
+
+.td1{
+    font-weight: bold;
+    text-align: right;
+}
+.TitleForms{
+    height: 70px;
+
+}
+
+.input-numero {
+    width: 60px;
+}
+
+

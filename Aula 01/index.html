@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Formulario</title>
+        <link rel="stylesheet" href="estilo.css">
+    </head>
+<form>
+        <table>
+            <tr class="TitleForms">
+                <th colspan="2">Formulário</th>
+            </tr>
+            
+            <tr>
+                <td class="td1"><label for="nomeforms">Nome:</label></td>
+                <td><input type="text" id="nomeforms" name="nomeforms" required>*</td>
+            </tr>
+            <tr>
+                <td class="td1"><label for="emailforms">E-mail:</label></td>
+                <td><input type="text" id="emailforms" name="emailforms" required>*</td>
+            </tr>
+            <tr>
+                <td class="td1"><label for="telefoneforms">Telefone:</label></td>
+                <td><input type="text" id="telefoneforms" name="telefoneforms" required>*</td>
+            </tr>
+            <tr>
+                <td class="td1"><label for="tipopessoaforms">Tipo de Pessoa:</label><br>
+                    <td><select name="pessoa">
+                        <option value="" disabled selected>Selecione a pessoa</option>
+                        <option value="Maior18">Fisica</option>
+                        <option value="Menor18">Juridica</option>
+                    </select></td>
+            </tr>
+            <tr>
+                <td class="td1"><label for="enderecoforms">Endereço:</label></td>
+                <td><input type="text" id="enderecoforms" name="enderecoforms" required>*</td>
+            </tr>
+            <tr>
+                <td class="td1"><label for="ufforms">UF (Estado):</label></td>
+                <td><input type="text" id="ufforms" name="ufforms" required>*</td>
+            </tr>
+            <td></td>
+            <td><label for="nomeforms">* Obrigatórios</label></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><button type="submit">Enviar dados</button></td>
+            </tr> 
+</html>
