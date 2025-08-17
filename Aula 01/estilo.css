@@ -1,28 +1,10 @@
-.formulario{
-    width: 100px;
-    padding: 10px; 
-    margin: auto;/*centraliza o formulario(tabela)*/
+header {
+    text-align: center;      /* centraliza o conteúdo do header */
+    margin-bottom: 20px;     /* espaçamento abaixo do header */
 }
 
-
-table,td,th{
-    border: 1px solid black;
-    padding: 5px;
-    border-collapse: collapse;
-    margin: auto;/*centraliza o formulario(tabela)*/
+.formulario {
+    width: 400px;       /* largura do formulário */
+    padding: 20px;      /* espaço interno ao redor dos campos */
+    margin: auto;       /* centraliza o formulário */
 }
-
-.td1{
-    font-weight: bold;
-    text-align: right;
-}
-.TitleForms{
-    height: 70px;
-
-}
-
-.input-numero {
-    width: 60px;
-}
-
-

@@ -1,49 +1,55 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <title>Formulario</title>
-        <link rel="stylesheet" href="estilo.css">
-    </head>
-<form>
-        <table>
-            <tr class="TitleForms">
-                <th colspan="2">Formulário</th>
-            </tr>
-            
-            <tr>
-                <td class="td1"><label for="nomeforms">Nome:</label></td>
-                <td><input type="text" id="nomeforms" name="nomeforms" required>*</td>
-            </tr>
-            <tr>
-                <td class="td1"><label for="emailforms">E-mail:</label></td>
-                <td><input type="text" id="emailforms" name="emailforms" required>*</td>
-            </tr>
-            <tr>
-                <td class="td1"><label for="telefoneforms">Telefone:</label></td>
-                <td><input type="text" id="telefoneforms" name="telefoneforms" required>*</td>
-            </tr>
-            <tr>
-                <td class="td1"><label for="tipopessoaforms">Tipo de Pessoa:</label><br>
-                    <td><select name="pessoa">
-                        <option value="" disabled selected>Selecione a pessoa</option>
-                        <option value="pfisica">Fisica</option>
-                        <option value="pjuridica">Juridica</option>
-                    </select></td>
-            </tr>
-            <tr>
-                <td class="td1"><label for="enderecoforms">Endereço:</label></td>
-                <td><input type="text" id="enderecoforms" name="enderecoforms" required>*</td>
-            </tr>
-            <tr>
-                <td class="td1"><label for="ufforms">UF (Estado):</label></td>
-                <td><input type="text" id="ufforms" name="ufforms" required>*</td>
-            </tr>
-            <td></td>
-            <td><label for="nomeforms">* Obrigatórios</label></td>
-            </tr>
-            <tr>
-                <td></td>
-                <td><button type="submit">Enviar dados</button></td>
-            </tr> 
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulário</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <header>
+        <h1>Cadastro de Contato</h1>
+    </header>
+
+    <main>
+        <form class="formulario">
+            <fieldset>
+                <legend>Dados do Contato</legend>
+                
+                <ul>
+                    <li>
+                        <label for="nomeforms">Nome:</label>
+                        <input type="text" id="nomeforms" name="nomeforms" required> *
+                    </li>
+                    <li>
+                        <label for="emailforms">E-mail:</label>
+                        <input type="email" id="emailforms" name="emailforms" required> *
+                    </li>
+                    <li>
+                        <label for="telefoneforms">Telefone:</label>
+                        <input type="tel" id="telefoneforms" name="telefoneforms" required> *
+                    </li>
+                    <li>
+                        <label for="tipopessoaforms">Tipo de Pessoa:</label>
+                        <select id="tipopessoaforms" name="pessoa" required>
+                            <option value="" disabled selected>Selecione a pessoa</option>
+                            <option value="pfisica">Física</option>
+                            <option value="pjuridica">Jurídica</option>
+                        </select>
+                    </li>
+                    <li>
+                        <label for="enderecoforms">Endereço:</label>
+                        <input type="text" id="enderecoforms" name="enderecoforms" required> *
+                    </li>
+                    <li>
+                        <label for="ufforms">UF (Estado):</label>
+                        <input type="text" id="ufforms" name="ufforms" maxlength="2" required> *
+                    </li>
+                </ul>
+                
+                <p>* Campos obrigatórios</p>
+                <button type="submit">Enviar dados</button>
+            </fieldset>
+        </form>
+    </main>
+</body>
 </html>

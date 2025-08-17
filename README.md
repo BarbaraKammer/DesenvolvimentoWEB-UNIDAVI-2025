@@ -7,8 +7,8 @@ Neste repositório, serão adicionados todos os arquivos das atividades realizad
 
 ## Índice
 
-- [Aula 1](#aula1)
-- [Aula 2](#aula2)
+- [Aula 1](Aula%2001/)
+- [Aula 2](Aula%2002/)
 
 ## Instalação
 Passos para instalar e configurar o projeto:
