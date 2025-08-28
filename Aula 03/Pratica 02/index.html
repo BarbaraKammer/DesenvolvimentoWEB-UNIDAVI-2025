@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Pessoa</title>
+    <style>
+        table,td,th{
+            border: 1px solid black;
+            padding: 5px;
+            border-collapse: collapse;
+            margin: auto;/*centraliza o formulario(tabela)*/
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <tr>
+            <th>Cadastro de Pessoa</th>
+        </tr>
+    
+    <tr>
+        <td class="td1"><label for="nomeforms">Nome:</label></td>
+        <td><input type="text" id="nomeforms" name="nomeforms" maxlength="100" required>*</td>
+    </tr>    
+    <tr>
+        <td class="td1"><label for="sobrenome">Sobrenome:</label></td>
+        <td><input type="text" id="sobrenome" name="sobrenome" maxlength="100" required>*</td>
+    </tr>
+    <tr>
+        <td class="td1"><label for="email">E-Mail:</label></td>
+        <td><input type="email" id="email" name="email" required>*</td>
+    </tr>
+    <tr>
+        <td class="td1"><label for="dataNascimento">Data de Nascimento:</label></td>
+        <td><input type="date" id="dataNascimento" name="dataNascimento" min="1920-01-01" max="2024-01-01"></td>
+    </tr>
+    <tr>
+        <td class="td1"><label>Sexo:</label></td>
+        <td>
+            <div class="radio-group">
+                <input type="radio" id="masculino" name="sexo" value="Masculino" required>
+                <label for="masculino">Masculino</label>
+                <input type="radio" id="feminino" name="sexo" value="Feminino">
+                <label for="feminino">Feminino</label>
+            </div>
+        </td>
+    </tr>
+    <tr>
+        <td class="td1"><label for="endereco">Endereço:</label></td>
+        <td><input type="text" id="endereco" name="endereco" maxlength="200"></td>
+    </tr>
+    <tr>
+        <td class="td1"><label for="cep">CEP:</label></td>
+        <td><input type="text" id="cep" name="cep" maxlength="10"></td>
+    </tr>
+    <tr>
+        <td class="td1"><label for="cor">Cor favorita:</label></td>
+        <td><input type="color" id="cor" name="cor"></td>
+    </tr>
+    <tr>
+        <td class="td1"><label for="estado">Estado (UF):</label></td>
+        <td>
+            <select id="estado" name="estado">
+            <option value="">Selecione</option>
+            <option value="AC">AC</option>
+            <option value="AL">AL</option>
+            <option value="AP">AP</option>
+            <option value="AM">AM</option>
+            <option value="BA">BA</option>
+            <option value="CE">CE</option>
+            <option value="DF">DF</option>
+            <option value="ES">ES</option>
+            <option value="GO">GO</option>
+            <option value="MA">MA</option>
+            <option value="MT">MT</option>
+            <option value="MS">MS</option>
+            <option value="MG">MG</option>
+            <option value="PA">PA</option>
+            <option value="PB">PB</option>
+            <option value="PR">PR</option>
+            <option value="PE">PE</option>
+            <option value="PI">PI</option>
+            <option value="RJ">RJ</option>
+            <option value="RN">RN</option>
+            <option value="RS">RS</option>
+            <option value="RO">RO</option>
+            <option value="RR">RR</option>
+            <option value="SC">SC</option>
+            <option value="SP">SP</option>
+            <option value="SE">SE</option>
+            <option value="TO">TO</option>
+            </select>
+        </td>
+    </tr>
+    <tr>
+        <td></td>
+        <td><button type="submit">Cadastrar</button></td>
+    </tr>
+</table>
+
+</body>
+</html>
