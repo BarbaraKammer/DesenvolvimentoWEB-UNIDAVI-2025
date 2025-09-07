@@ -29,17 +29,17 @@ btnLinha.addEventListener('click', function() {
     btnLinha.disabled = true;
 });
 
-// Coluna totalizadora (média por aluno) com <th rowspan="2">Média</th>
+// Coluna totalizadora (média por aluno) 
 btnColuna.addEventListener('click', function() {
     const linhas = tabela.rows;
 
-    // Adicionar th na primeira linha do cabeçalho com rowspan=2
+    // Adiciona th na primeira linha do cabeçalho
     const thMedia = document.createElement('th');
     thMedia.setAttribute('rowspan', '2');
     thMedia.innerText = "Média";
     linhas[0].appendChild(thMedia);
 
-    // Adicionar células médias nas linhas de aluno
+    // Adiciona células médias nas linhas de aluno
     for (let i = 2; i < linhas.length; i++) {
         let soma = 0;
         let qtd = 0;
