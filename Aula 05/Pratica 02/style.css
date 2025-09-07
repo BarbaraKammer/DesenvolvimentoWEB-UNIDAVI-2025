@@ -11,3 +11,12 @@ th, td {
 th {
     background-color: #e3bbd6;
 }
+
+.media-linha {
+    font-weight: bold;
+    background-color: #e0e0e0;
+}
+.media-coluna {
+    font-weight: bold;
+    background-color: #d0f0c0;
+}
