@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Calculadora</title>
+</head>
+<body>
+    <form method="post" target="_blank">
+        <fieldset>
+            <label for="primeiro_numero">N1</label>
+            <input id="primeiro_numero" type="text" name="primeiro_numero" size="20" maxlength="20" title="Primeiro numero" required>
+            <br>
+            <label for="segundo_numero">N2</label>
+            <input id="segundo_numero" type="text" name="segundo_numero" size="20" maxlength="20" title="Segundo numero" required>
+            <br>
+            <input class="btn btn-soma" type="button" name="soma" id="soma" value=" + Soma">
+            <input class="btn btn-subtracao" type="button" name="subtracao" id="subtracao" value=" - Subtração">
+            <input class="btn btn-multiplicacao" type="button" name="multiplicacao" id="multiplicacao" value=" × Multiplicação">
+            <input class="btn btn-divisao" type="button" name="divisao" id="divisao" value=" ÷ Divisão">
+            <br><br>
+            <label for="resultado">Resultado:</label>
+            <input id="resultado" type="text" readonly>
+        </fieldset>
+    </form>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,14 @@
+.positivo{
+    border-color: rgb(118, 209, 126);
+    background-color: #c8e6c9;
+}
+
+.negativo{
+    border-color: rgb(235, 120, 81);
+    background-color: #ffcdd2;
+}
+
+.neutro{
+    border-color: rgb(84, 81, 80);
+    background-color: #e0e0e0;
+}

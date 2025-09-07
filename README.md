@@ -10,6 +10,9 @@ Neste repositório, serão adicionados todos os arquivos das atividades realizad
 - [Aula 1](Aula%2001/)
 - [Aula 2](Aula%2002/)
 - [Aula 3](Aula%2003/)
+- [Aula 4](Aula%2004/)
+- [Aula 5](Aula%2005/)
+
 
 ## Instalação
 Passos para instalar e configurar o projeto:
