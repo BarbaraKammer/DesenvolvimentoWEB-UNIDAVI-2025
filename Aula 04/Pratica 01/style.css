@@ -1,0 +1,15 @@
+fieldset{
+    background-color: rgb(228, 226, 226);
+}
+
+#containerazul{
+    background-color: rgb(69, 69, 197);
+}
+
+#containercinza{
+    background-color: grey;
+}
+
+li {
+    list-style-type: none;
+}

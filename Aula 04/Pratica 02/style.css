@@ -1,0 +1,80 @@
+body {
+    background: radial-gradient(ellipse at top, #e66465, transparent),
+    radial-gradient(ellipse at bottom, #a020f0, transparent),
+    radial-gradient(circle at 10%, #1974d1, transparent);
+    background-repeat: no-repeat;
+    background-size: cover; /* força os gradientes a cobrirem toda a tela */
+    height: 100vh;
+    margin: 0;
+}
+
+form{
+    background-color: rgb(237, 191, 206);
+    width: 400px;       /* largura do formulário */
+    padding: 20px;      /* espaço interno ao redor dos campos */
+    margin: auto;       /* centraliza o formulário */
+    margin-top: 92px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.3);
+}
+
+legend{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    text-align: center;
+    font-size: 20px;
+    color: #231e43;
+}
+
+ul{
+    background-color: rgb(255, 214, 229);
+    text-align: left;
+    margin: 10px;
+    padding: 25px;
+    border-radius: 5px;
+    border: 1px solid rgba(255,255,255,0.3); /* borda sutil */
+
+}
+
+li {
+    list-style-type: none;
+    padding: 5px;
+}
+
+fieldset{
+    border: none;
+}
+
+label{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    color: #231e43;
+}
+
+#container01, #container02, #container03{
+    border: 2px solid rgb(237, 191, 206);
+}
+
+.btn{
+    padding: 5px 10px;
+    align-items: center;
+    cursor: pointer;
+    font-size: 15px;
+    border-radius: 3px;
+    border: 2px solid rgb(24, 0, 49);
+}
+
+.btn-enviar {
+    background: #97c1eb;
+    color: #fff;
+}
+
+.btn-reset {
+    background: #f38ce4;
+    color: #fff;
+}
+
+#button{
+    text-align: center; /* centraliza horizontalmente os botões */
+    margin-top: 15px;
+}
