@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Feira do Joãozinho</title>
+</head>
+<body>
+    <h2>Feira do Joãozinho</h2>
+    
+    <form method="post" action="processa_compra.php">
+        <h3>Preços por Kg:</h3>
+        Maçã: R$ <input type="number" name="preco_maca" step="0.01" placeholder="Preço maçã/kg" required><br>
+        Melancia: R$ <input type="number" name="preco_melancia" step="0.01" placeholder="Preço melancia/kg" required><br>
+        Laranja: R$ <input type="number" name="preco_laranja" step="0.01" placeholder="Preço laranja/kg" required><br>
+        Repolho: R$ <input type="number" name="preco_repolho" step="0.01" placeholder="Preço repolho/kg" required><br>
+        Cenoura: R$ <input type="number" name="preco_cenoura" step="0.01" placeholder="Preço cenoura/kg" required><br>
+        Batatinha: R$ <input type="number" name="preco_batata" step="0.01" placeholder="Preço batata/kg" required><br><br>
+
+        <h3>Quantidades compradas (Kg):</h3>
+        Maçã: <input type="number" name="qtd_maca" step="0.01" placeholder="Kg maçã" required><br>
+        Melancia: <input type="number" name="qtd_melancia" step="0.01" placeholder="Kg melancia" required><br>
+        Laranja: <input type="number" name="qtd_laranja" step="0.01" placeholder="Kg laranja" required><br>
+        Repolho: <input type="number" name="qtd_repolho" step="0.01" placeholder="Kg repolho" required><br>
+        Cenoura: <input type="number" name="qtd_cenoura" step="0.01" placeholder="Kg cenoura" required><br>
+        Batatinha: <input type="number" name="qtd_batata" step="0.01" placeholder="Kg batata" required><br><br>
+
+        <input type="submit" value="Calcular Compra">
+    </form>
+</body>
+</html>

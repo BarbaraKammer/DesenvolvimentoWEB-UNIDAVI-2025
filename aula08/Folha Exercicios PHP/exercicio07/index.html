@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Financiamento do Carro</title>
+</head>
+<body>
+    <h2>Cálculo de Juros do Financiamento</h2>
+    
+    <form method="post" action="processa_juros.php">
+        Valor à vista: R$ <input type="number" name="valor_vista" step="0.01" value="22500.00" readonly><br>
+        Número de parcelas: <input type="number" name="parcelas" value="60" readonly><br>
+        Valor da parcela: R$ <input type="number" name="valor_parcela" step="0.01" value="489.65" readonly><br><br>
+        <input type="submit" value="Calcular Juros">
+    </form>
+</body>
+</html>
