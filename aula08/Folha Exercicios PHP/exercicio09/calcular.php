@@ -2,7 +2,6 @@
 function calcularMontanteJurosCompostos($capital, $taxa_juros, $tempo) {
     $i = $taxa_juros / 100; // converter para decimal
     
-    // Calculando (1 + i)^n manualmente sem usar pow()
     $fator = 1 + $i;
     $resultado = 1;
     
