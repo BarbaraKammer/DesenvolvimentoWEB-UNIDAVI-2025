@@ -28,6 +28,7 @@
 6. Dentro dela, localize a pasta do projeto: trabalho_semestral
 
 
+
 **Opção 2 – Via Download ZIP:**
 
 1. Acesse o repositório do projeto no GitHub.
