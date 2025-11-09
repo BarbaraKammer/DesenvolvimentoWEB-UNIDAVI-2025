@@ -1,19 +1,27 @@
 <?php
 require_once "conexao.php";
 
-// Consulta a quantidade de pessoas cadastradas
-$result = pg_query($connection, "SELECT COUNT(*) AS qtd FROM tbpessoa");
+// Verifica se o campo de busca foi preenchido
+$filtro = $_GET['busca'] ?? '';
 
-if (!$result) {
-    echo "Erro na consulta de contagem.";
-} else {
+// Mostra a quantidade de pessoas cadastradas
+$result = pg_query($connection, "SELECT COUNT(*) AS qtd FROM tbpessoa");
+if ($result) {
     $row = pg_fetch_assoc($result);
-    echo "<h3>Quantidade de pessoas cadastradas: " . $row['qtd'] . "</h3>";
+    echo "<h3>Quantidade de pessoas cadastradas: {$row['qtd']}</h3>";
 }
 
-// Consulta todos os registros
-$result = pg_query($connection, "SELECT * FROM tbpessoa ORDER BY pescodigo");
+if (!empty($filtro)) {
+    $query = "SELECT * FROM tbpessoa WHERE pesnome ILIKE $1 ORDER BY pescodigo";
+    $params = ["%" . $filtro . "%"];
+    $result = pg_query_params($connection, $query, $params);
+    echo "<p>Filtrando por nome que contém: <strong>" . htmlspecialchars($filtro) . "</strong></p>";
+} else {
+    $query = "SELECT * FROM tbpessoa ORDER BY pescodigo";
+    $result = pg_query($connection, $query);
+}
 
+// Exibe tabela de resultados
 if ($result) {
     echo "<table border='1' cellpadding='8' cellspacing='0'>
             <tr>
@@ -25,7 +33,6 @@ if ($result) {
                 <th>Estado</th>
             </tr>";
 
-    // Percorre as linhas retornadas
     while ($row = pg_fetch_assoc($result)) {
         echo "<tr>
                 <td>{$row['pescodigo']}</td>
@@ -39,6 +46,6 @@ if ($result) {
 
     echo "</table>";
 } else {
-    echo "Erro ao buscar dados da tabela.";
+    echo "Erro ao buscar dados.";
 }
 ?>
