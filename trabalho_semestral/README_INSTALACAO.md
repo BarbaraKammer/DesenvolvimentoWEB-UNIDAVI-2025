@@ -5,20 +5,17 @@
 
 **Opção 1 – Via Git:**
 
-    1. Acesse o repositório do projeto no GitHub.
-    2. Copie o link HTTPS do repositório.
-    3. Abra o terminal (ou Git Bash) e navegue até o diretório do servidor local:
-
+1. Acesse o repositório do projeto no GitHub.
+2. Copie o link HTTPS do repositório.
+3. Abra o terminal (ou Git Bash) e navegue até o diretório do servidor local:
    ```bash
    cd C:\xampp\htdocs
    ```
-    4. Execute o comando:
-
+4. Execute o comando:
    ```bash
    git clone https://github.com/BarbaraKammer/DesenvolvimentoWEB-UNIDAVI-2025.git
    ```
-    5. Após o download, verifique se a pasta foi criada em:
-
+5. Após o download, verifique se a pasta foi criada em:
    ```
    C:\xampp\htdocs\DesenvolvimentoWEB-UNIDAVI-2025\
    ```
