@@ -1,0 +1,67 @@
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  overflow: hidden;
+}
+
+
+/* Tela final */
+.tela-final {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(140deg, #eef3ff, #ffffff);
+  animation: fade .4s ease;
+}
+
+/* Card */
+.card-final {
+  background: #ffffff;
+  border-radius: 26px;
+  padding: 60px 55px;
+  text-align: center;
+  max-width: 760px;
+  box-shadow: 0 10px 40px rgba(0,0,0,.15);
+  border: 1px solid rgba(200,210,240,.45);
+  animation: zoomIn .5s ease;
+}
+
+/* Títulos */
+.card-final h1 {
+  font-size: 36px;
+  font-weight: 700;
+  color: #1b2b42;
+  margin-bottom: 18px;
+}
+
+/* Texto */
+.card-final p {
+  font-size: 22px;
+  color: #41526e;
+  line-height: 1.45;
+}
+
+.contador {
+  font-size: 18px;
+  margin-top: 22px;
+  color: #556174;
+}
+
+#timer {
+  font-weight: 700;
+  font-size: 21px;
+  color: #1F6FEB; /* destaque azul */
+}
+
+/* Animações */
+@keyframes zoomIn {
+  from { opacity: 0; transform: scale(.88) translateY(20px); }
+  to   { opacity: 1; transform: scale(1) translateY(0); }
+}
+@keyframes fade {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}

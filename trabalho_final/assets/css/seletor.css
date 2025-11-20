@@ -1,0 +1,104 @@
+:root {
+  --bg1: #eef2ff;
+  --bg2: #ffffff;
+  --card: #ffffff;
+  --primary: #6c4cf5;
+  --primary-hover: #5937e4;
+  --text: #1a1a1a;
+  --border: #d7d9e2;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  background: linear-gradient(140deg, var(--bg1), var(--bg2));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 18px;
+  box-sizing: border-box;
+}
+
+.card {
+  background: var(--card);
+  padding: 50px 42px;
+  width: 100%;
+  max-width: 580px;
+  border-radius: 26px;
+  box-shadow: 0 10px 38px rgba(0,0,0,.15);
+  border: 1px solid var(--border);
+  animation: fade .5s ease-out;
+  text-align: center;
+}
+
+.card h2 {
+  margin: 0 0 28px;
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--text);
+}
+
+label {
+  font-size: 18px;
+  text-align: left;
+  display: block;
+  margin-bottom: 6px;
+  margin-top: 20px;
+  font-weight: 600;
+  color: #3c3c3c;
+}
+
+select {
+  width: 100%;
+  padding: 15px;
+  font-size: 17px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: #f7f8ff;
+  transition: .25s;
+  outline: none;
+}
+
+select:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 8px rgba(108, 76, 245, .3);
+}
+
+button {
+  width: 100%;
+  margin-top: 38px;
+  background: var(--primary);
+  color: white;
+  padding: 16px;
+  font-size: 20px;
+  border-radius: 14px;
+  border: none;
+  cursor: pointer;
+  transition: .25s;
+  box-shadow: 0 8px 18px rgba(108, 76, 245, .25);
+}
+
+button:hover {
+  background: var(--primary-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 26px rgba(108, 76, 245, .35);
+}
+
+@keyframes fade {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* 🔥 deixa tudo perfeito no celular e tablet */
+@media (max-width: 520px) {
+  .card {
+    padding: 40px 28px;
+  }
+  .card h2 {
+    font-size: 26px;
+  }
+  button {
+    font-size: 18px;
+  }
+}

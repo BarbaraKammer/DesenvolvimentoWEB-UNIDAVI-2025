@@ -1,0 +1,94 @@
+:root {
+    --bg1: #e9eef9;
+    --bg2: #c9d7f2;
+  --card: #ffffff;
+  --border: #eaeaea;
+  --text: #262525;
+  --primary: #D2A0D9;
+  --primary-hover: #a979af;
+  --primary-glow: #D2A0D9;
+  --input-bg: #ffffff;
+  --danger: #e63946;
+}
+
+/* 🔥 Fundo do login */
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(circle at 20% 20%, var(--bg1), var(--bg2));
+  color: var(--text);
+}
+
+/* ✨ Card central */
+.card {
+  background: var(--card) !important;
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  padding: 40px;
+  width: 400px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, .55);
+  animation: fadeIn .65s ease-out;
+  transition: .35s;
+}
+
+
+/* ✨ Título */
+.card h3 {
+  font-size: 24px;
+  font-weight: 600;
+  color: rgb(41, 40, 40);
+}
+
+/* 🖋 Inputs */
+.card input {
+  background: var(--input-bg);
+  border: 1px solid var(--border);
+  padding: 13px;
+  font-size: 16px;
+  border-radius: 7px;
+  color: var(--text);
+  transition: .25s;
+}
+
+.card input:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 6px var(--primary-glow);
+}
+
+/* 🔘 Botão */
+.card .btn-primary {
+  background: var(--primary) !important;
+  border: none !important;
+  padding: 12px;
+  font-size: 17px;
+  border-radius: 7px;
+  margin-top: 5px;
+  transition: .25s;
+  cursor: pointer;
+  box-shadow: 0 0 0px transparent;
+}
+
+.card .btn-primary:hover {
+  background: var(--primary-hover) !important;
+  transform: translateY(-1px);
+  box-shadow: 0 0 12px var(--primary-glow);
+}
+
+/* ❌ Mensagem de erro */
+.text-danger {
+  color: var(--danger) !important;
+  font-size: 14px;
+  margin-top: -10px;
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+/* ⚡ Animação */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
+}
