@@ -1,48 +1,60 @@
 <?php
-/* É uma boa prática fazer a conexão com o SGBD e qualquer outra operação subsequente dentro de um try/catch */
 try {
-    /* Etapa 1 - Criar uma instância da classe de conexão e definir os parâmetros de conexão */
+    // Conexão
     $dbconn = pg_connect("host=localhost port=5432 dbname=local user=postgres password=12345");
-    
-    if ($dbconn) {
-        echo "Database conectado...<br>";
 
-        /* Etapa 2 - Fazer uma query simples - retornará a quantidade de tabelas no database */
-        $result = pg_query($dbconn, "SELECT COUNT(*) AS qtd_tabs FROM pg_tables");
+    if (!$dbconn) {
+        die("Erro ao conectar ao banco.");
+    }
 
-        /* Etapa 3 - Buscar os dados da query e percorrer as linhas */
-        while ($row = pg_fetch_assoc($result)) {
-            echo "Tabelas no banco: " . $row['qtd_tabs'] . "<br>";
-        }
+    echo "Database conectado...<br>";
 
-        /* Etapa 4 - Preparar o array de dados para ser enviado ao SGBD */
-        $aDados = array(
-            $_POST['campo_primeiro_nome'],
-            $_POST['campo_sobrenome'],
-            $_POST['campo_email'],
-            $_POST['campo_password'],
-            $_POST['campo_cidade'],
-            $_POST['campo_estado']
-        );
+    // SANITIZAÇÃO DOS CAMPOS
+    $primeiroNome = trim(filter_input(INPUT_POST, 'campo_primeiro_nome', FILTER_SANITIZE_STRING));
+    $sobrenome    = trim(filter_input(INPUT_POST, 'campo_sobrenome', FILTER_SANITIZE_STRING));
+    $email        = trim(filter_input(INPUT_POST, 'campo_email', FILTER_SANITIZE_EMAIL));
+    $senha        = trim($_POST['campo_password']);
+    $cidade       = trim(filter_input(INPUT_POST, 'campo_cidade', FILTER_SANITIZE_STRING));
+    $estado       = strtoupper(trim(filter_input(INPUT_POST, 'campo_estado', FILTER_SANITIZE_STRING)));
 
-        /* Etapa 5 - Fazer a query de inserção dos dados (DML) com o array de valores */
-        $result = pg_query_params(
-            $dbconn,
-            "INSERT INTO TBPESSOA
-                (PESNOME, PESSOBRENOME, PESEMAIL, PESPASSWORD, PESCIDADE, PESESTADO)
-            VALUES ($1, $2, $3, $4, $5, $6)",
-            $aDados
-        );
+    // VALIDAÇÕES
+    $erros = [];
 
-        if ($result) {
-            echo "Registro inserido com sucesso!";
-        } else {
-            echo "Erro ao inserir: " . pg_last_error($dbconn);
-        }
+    if (strlen($primeiroNome) < 2) $erros[] = "Primeiro nome deve ter ao menos 2 caracteres.";
+    if (strlen($sobrenome) < 2) $erros[] = "Sobrenome deve ter ao menos 2 caracteres.";
+    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) $erros[] = "Email inválido.";
+    if (strlen($senha) < 6) $erros[] = "Senha deve ter no mínimo 6 caracteres.";
+    if (strlen($cidade) < 2) $erros[] = "Cidade inválida.";
+    if (!preg_match("/^[A-Z]{2}$/", $estado)) $erros[] = "UF deve ter apenas 2 letras (ex.: SC, SP, RJ).";
+
+    // Se houver erros, mostrar e parar execução
+    if (!empty($erros)) {
+        echo "<h3>⚠ Problemas encontrados:</h3><ul>";
+        foreach ($erros as $msg) echo "<li>$msg</li>";
+        echo "</ul><a href='index.html'>Voltar e corrigir</a>";
+        exit;
+    }
+
+    // Hash da senha 
+    $senhaHash = password_hash($senha, PASSWORD_DEFAULT);
+
+    // INSERÇÃO SEGURA
+    $aDados = [$primeiroNome, $sobrenome, $email, $senhaHash, $cidade, $estado];
+
+    $result = pg_query_params(
+        $dbconn,
+        "INSERT INTO TBPESSOA
+            (PESNOME, PESSOBRENOME, PESEMAIL, PESPASSWORD, PESCIDADE, PESESTADO)
+        VALUES ($1, $2, $3, $4, $5, $6)",
+        $aDados
+    );
+
+    if ($result) {
+        echo "<h3> Registro inserido com sucesso!</h3>";
+    } else {
+        echo "<h3> Erro ao inserir:</h3>" . pg_last_error($dbconn);
     }
 
 } catch (Exception $e) {
-    /* Caso ocorra algum erro, então exibir mensagem */
     echo "Erro: " . $e->getMessage();
 }
-?>

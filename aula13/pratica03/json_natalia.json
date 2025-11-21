@@ -1,0 +1,18 @@
+{
+    "nome": "Natalia",
+    "sobrenome": "Kammer",
+    "dataNascimento": "2005-03-01",
+    "cpfcnpj": "444.444.444-44",
+    "tipo": 1,
+    "telefone": {
+        "nome": "Natalia",
+        "telefone": "(47) 99999-3333"
+    },
+    "endereco": {
+        "logradouro": "Rua XPTO",
+        "bairro": "Centro",
+        "cidade": "Rio do Sul",
+        "estado": "SC",
+        "cep": "00000-000"
+    }
+}

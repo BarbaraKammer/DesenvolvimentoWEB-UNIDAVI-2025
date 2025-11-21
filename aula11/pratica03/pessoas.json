@@ -78,5 +78,13 @@
         "senha": "0909",
         "cidade": "ABC",
         "estado": "SP"
+    },
+    {
+        "nome": "Teste00",
+        "sobrenome": "Teste00",
+        "email": "Teste00@gmail.com",
+        "senha": "Teste00",
+        "cidade": "Teste00",
+        "estado": "Te"
     }
 ]

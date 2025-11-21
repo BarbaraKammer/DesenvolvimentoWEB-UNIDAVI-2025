@@ -12,6 +12,14 @@ Neste repositório, serão adicionados todos os arquivos das atividades realizad
 - [Aula 3](Aula%2003/)
 - [Aula 4](Aula%2004/)
 - [Aula 5](Aula%2005/)
+- [Aula 6](Aula%2006/)
+- [Aula 7](Aula%2007/)
+- [Aula 8](Aula%2008/)
+- [Aula 9](Aula%2009/)
+- [Aula 10](Aula%2010/)
+- [Aula 11](Aula%2011/)
+- [Aula 13](Aula%2013/)
+- [trabalho-final](trabalho-final/)
 
 
 ## Instalação

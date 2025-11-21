@@ -8,14 +8,14 @@ $filtro = $_GET['busca'] ?? '';
 $result = pg_query($connection, "SELECT COUNT(*) AS qtd FROM tbpessoa");
 if ($result) {
     $row = pg_fetch_assoc($result);
-    echo "<h3>Quantidade de pessoas cadastradas: {$row['qtd']}</h3>";
+    echo "<h3>Quantidade de pessoas cadastradas: " . htmlspecialchars($row['qtd']) . "</h3>";
 }
 
 if (!empty($filtro)) {
     $query = "SELECT * FROM tbpessoa WHERE pesnome ILIKE $1 ORDER BY pescodigo";
     $params = ["%" . $filtro . "%"];
     $result = pg_query_params($connection, $query, $params);
-    echo "<p>Filtrando por nome que contém: <strong>" . htmlspecialchars($filtro) . "</strong></p>";
+    echo "<p>Filtrando por nome que contém: <strong>" . htmlspecialchars($filtro, ENT_QUOTES, 'UTF-8') . "</strong></p>";
 } else {
     $query = "SELECT * FROM tbpessoa ORDER BY pescodigo";
     $result = pg_query($connection, $query);
@@ -35,12 +35,12 @@ if ($result) {
 
     while ($row = pg_fetch_assoc($result)) {
         echo "<tr>
-                <td>{$row['pescodigo']}</td>
-                <td>{$row['pesnome']}</td>
-                <td>{$row['pessobrenome']}</td>
-                <td>{$row['pesemail']}</td>
-                <td>{$row['pescidade']}</td>
-                <td>{$row['pesestado']}</td>
+                <td>" . htmlspecialchars($row['pescodigo'], ENT_QUOTES, 'UTF-8') . "</td>
+                <td>" . htmlspecialchars($row['pesnome'], ENT_QUOTES, 'UTF-8') . "</td>
+                <td>" . htmlspecialchars($row['pessobrenome'], ENT_QUOTES, 'UTF-8') . "</td>
+                <td>" . htmlspecialchars($row['pesemail'], ENT_QUOTES, 'UTF-8') . "</td>
+                <td>" . htmlspecialchars($row['pescidade'], ENT_QUOTES, 'UTF-8') . "</td>
+                <td>" . htmlspecialchars($row['pesestado'], ENT_QUOTES, 'UTF-8') . "</td>
             </tr>";
     }
 

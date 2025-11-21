@@ -1,0 +1,18 @@
+{
+    "nome": "Emerson",
+    "sobrenome": "Kammer",
+    "dataNascimento": "1970-09-15",
+    "cpfcnpj": "333.333.333-33",
+    "tipo": 1,
+    "telefone": {
+        "nome": "Emerson",
+        "telefone": "(47) 99999-2222"
+    },
+    "endereco": {
+        "logradouro": "Rua XPTO",
+        "bairro": "Centro",
+        "cidade": "Rio do Sul",
+        "estado": "SC",
+        "cep": "00000-000"
+    }
+}

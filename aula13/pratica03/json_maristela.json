@@ -1,0 +1,18 @@
+{
+    "nome": "Maristela",
+    "sobrenome": "Kammer",
+    "dataNascimento": "1975-05-10",
+    "cpfcnpj": "222.222.222-22",
+    "tipo": 1,
+    "telefone": {
+        "nome": "Maristela",
+        "telefone": "(47) 99999-1111"
+    },
+    "endereco": {
+        "logradouro": "Rua XPTO",
+        "bairro": "Centro",
+        "cidade": "Rio do Sul",
+        "estado": "SC",
+        "cep": "00000-000"
+    }
+}
