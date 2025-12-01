@@ -1,6 +1,6 @@
 <?php
-$device = $_GET['device'] ?? null;
-$setor  = $_GET['setor'] ?? null;
+$device = isset($_GET['device']) && is_numeric($_GET['device']) ? (int)$_GET['device'] : null;
+$setor  = isset($_GET['setor'])  && is_numeric($_GET['setor'])  ? (int)$_GET['setor']  : null;
 
 if (!$device || !$setor) {
   header("Location: seletor.php");
@@ -31,13 +31,16 @@ document.addEventListener("DOMContentLoaded", () => {
   let tempo = 10;
   const el = document.getElementById("timer");
 
+  const device = <?= (int)$device ?>;
+  const setor  = <?= (int)$setor ?>;
+
   const interval = setInterval(() => {
     tempo--;
     el.textContent = tempo;
 
     if (tempo <= 0) {
       clearInterval(interval);
-      window.location.href = `avaliacao.php?device=<?= $device ?>&setor=<?= $setor ?>`;
+      window.location.href = `avaliacao.php?device=${device}&setor=${setor}`;
     }
   }, 1000);
 });

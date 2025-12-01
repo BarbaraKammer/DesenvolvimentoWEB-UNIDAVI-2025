@@ -16,7 +16,7 @@
     <select name="device" required>
       <option value="">Selecione...</option>
       <?php foreach ($conn->query("SELECT id, nome FROM dispositivos WHERE status = TRUE ORDER BY nome") as $d): ?>
-        <option value="<?= $d['id'] ?>"><?= $d['nome'] ?></option>
+        <option value="<?= (int)$d['id'] ?>"><?= htmlspecialchars($d['nome']) ?></option>
       <?php endforeach; ?>
     </select>
 

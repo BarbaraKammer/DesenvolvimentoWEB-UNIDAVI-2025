@@ -3,7 +3,7 @@ require_once "../functions/db.php";
 $conn = db();
 
 // pega o dispositivo da URL
-$dispositivo_id = $_GET['device'] ?? null;
+$dispositivo_id = isset($_GET['device']) && is_numeric($_GET['device']) ? (int)$_GET['device'] : null;
 
 if (!$dispositivo_id) {
     header("Location: seletor.php");
@@ -20,6 +20,8 @@ if (!$setor_id) {
     header("Location: seletor.php");
     exit;
 }
+
+$baseUrl = dirname($_SERVER['SCRIPT_NAME'], 2);
 ?>
 <!DOCTYPE html>
 <html>
@@ -39,9 +41,9 @@ if (!$setor_id) {
 
 <script>
 /* Variáveis globais usadas no avaliacao.js */
-const BASE_URL = "<?php echo dirname($_SERVER['SCRIPT_NAME'], 2); ?>";
-const dispositivo_id = <?= $dispositivo_id ?>;
-const setor_id = <?= $setor_id ?>;
+const BASE_URL      = <?= json_encode($baseUrl); ?>;
+const dispositivo_id = <?= (int)$dispositivo_id ?>;
+const setor_id       = <?= (int)$setor_id ?>;
 </script>
 
 <script src="../assets/js/avaliacao.js"></script>
