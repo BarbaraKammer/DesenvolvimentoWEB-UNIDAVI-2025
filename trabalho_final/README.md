@@ -13,25 +13,25 @@ A seguir estão os passos necessários para instalação e execução em ambient
 
 ```bash
 cd C:\xampp\htdocs
-
+```
 
 3. Clone o repositório:
 
 ```bash
 git clone https://github.com/BarbaraKammer/DesenvolvimentoWEB-UNIDAVI-2025.git
-
+```
 
 4. Verifique se o diretório foi criado:
 
 ```bash
 C:\xampp\htdocs\DesenvolvimentoWEB-UNIDAVI-2025\
-
+```
 
 5. A pasta final do projeto é:
 
 ```bash
 ...\DesenvolvimentoWEB-UNIDAVI-2025\trabalho_semestral\
-
+```
 🔹 Opção B — Download ZIP
 
 1. Abra o repositório no GitHub.
@@ -46,7 +46,7 @@ C:\xampp\htdocs\DesenvolvimentoWEB-UNIDAVI-2025\
 
 ```bash
 C:\xampp\htdocs\
-
+```
 
 ## **Passo 02 - Configurar o Banco de Dados PostgreSQL
 
@@ -56,13 +56,13 @@ C:\xampp\htdocs\
 
 ```bash
 CREATE DATABASE trabalho_semestral;
-
+```
 
 3. Execute o script SQL localizado em:
 
 ```bash
 trabalho_semestral/sql/setup.sql
-
+```
 
 Esse script:
 -> cria as tabelas
@@ -76,7 +76,7 @@ Esse script:
 
 ```bash
 trabalho_semestral/functions/db.php
-
+```
 
 2. Ajuste conforme o seu ambiente:
 
@@ -97,7 +97,7 @@ function db() {
     }
     return $conn;
 }
-
+```
 
 ## **Passo 04 - Rodar o projeto (XAMPP / Apache)
 
@@ -109,7 +109,7 @@ function db() {
 
 ```bash
 http://localhost/trabalho_semestral/public/index.php
-
+```
 
 Acesso ao Painel Administrativo
 
@@ -118,8 +118,9 @@ O banco já cria automaticamente um usuário administrativo:
 ```bash
 Login	Senha
 admin	admin123
-
+```
 O painel administrativo está disponível em:
 
 ```bash
 http://localhost/trabalho_semestral/admin/login.php
+```
