@@ -3,14 +3,16 @@ namespace app\model;
 
 class Contato implements \JsonSerializable
 {
-    private string $nome;
-    private string $telefone;
+    private int $tipo;     
+    private string $nome; 
+    private string $valor; 
 
     public function jsonSerialize(): mixed
     {
         return [
+            'tipo' => $this->tipo,
             'nome' => $this->nome,
-            'telefone' => $this->telefone,
+            'valor' => $this->valor,
         ];
     }
 
@@ -19,18 +21,25 @@ class Contato implements \JsonSerializable
         return json_encode($this, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE);
     }
 
-    public function getNome(): string { 
-        return $this->nome; 
+    // Getters e Setters
+    public function getTipo(): int {
+        return $this->tipo;
     }
-    public function setNome(string $nome): void { 
-        $this->nome = $nome; 
-    }
-
-    public function getTelefone(): string { 
-        return $this->telefone; 
-    }
-    public function setTelefone(string $telefone): void { 
-        $this->telefone = $telefone; 
+    public function setTipo(int $tipo): void {
+        $this->tipo = $tipo;
     }
 
+    public function getNome(): string {
+        return $this->nome;
+    }
+    public function setNome(string $nome): void {
+        $this->nome = $nome;
+    }
+
+    public function getValor(): string {
+        return $this->valor;
+    }
+    public function setValor(string $valor): void {
+        $this->valor = $valor;
+    }
 }

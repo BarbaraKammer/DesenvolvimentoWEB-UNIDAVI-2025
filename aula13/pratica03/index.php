@@ -23,8 +23,10 @@ function criarPessoa(
     $end->setCep("00000-000");
 
     $cont = new Contato();
+    $cont->setTipo(1); 
     $cont->setNome($nome);
-    $cont->setTelefone($tel);
+    $cont->setValor($tel);
+
 
     $p = new Pessoa();
     $p->setNome($nome);

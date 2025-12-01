@@ -3,20 +3,28 @@ namespace app\model;
 
 class Contato
 {
-    private string $nome;
-    private string $telefone;
+    private int $tipo;     
+    private string $nome;  
+    private string $valor; 
 
-    public function getNome(): string { 
-        return $this->nome; 
+    public function getTipo(): int {
+        return $this->tipo;
     }
-    public function setNome(string $nome): void { 
-        $this->nome = $nome; 
+    public function setTipo(int $tipo): void {
+        $this->tipo = $tipo;
     }
 
-    public function getTelefone(): string { 
-        return $this->telefone; 
+    public function getNome(): string {
+        return $this->nome;
     }
-    public function setTelefone(string $telefone): void { 
-        $this->telefone = $telefone; 
+    public function setNome(string $nome): void {
+        $this->nome = $nome;
+    }
+
+    public function getValor(): string {
+        return $this->valor;
+    }
+    public function setValor(string $valor): void {
+        $this->valor = $valor;
     }
 }

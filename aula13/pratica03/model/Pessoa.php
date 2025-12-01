@@ -90,4 +90,13 @@ class Pessoa implements \JsonSerializable
         return $hoje->diff($nasc)->y;
     }
 
+    public function inicializaClasse(): void
+    {
+        $this->nome = "";
+        $this->sobrenome = "";
+        $this->dataNascimento = "";
+        $this->cpfcnpj = "";
+        $this->tipo = 0;
+    }
+
 }

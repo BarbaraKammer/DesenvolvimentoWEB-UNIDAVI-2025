@@ -5,8 +5,9 @@
     "cpfcnpj": "333.333.333-33",
     "tipo": 1,
     "telefone": {
+        "tipo": 1,
         "nome": "Emerson",
-        "telefone": "(47) 99999-2222"
+        "valor": "(47) 99999-2222"
     },
     "endereco": {
         "logradouro": "Rua XPTO",

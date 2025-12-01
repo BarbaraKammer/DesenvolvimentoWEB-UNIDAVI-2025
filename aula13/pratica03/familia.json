@@ -6,8 +6,9 @@
         "cpfcnpj": "111.111.111-11",
         "tipo": 1,
         "telefone": {
+            "tipo": 1,
             "nome": "Barbara",
-            "telefone": "(47) 99999-0000"
+            "valor": "(47) 99999-0000"
         },
         "endereco": {
             "logradouro": "Rua XPTO",
@@ -24,8 +25,9 @@
         "cpfcnpj": "222.222.222-22",
         "tipo": 1,
         "telefone": {
+            "tipo": 1,
             "nome": "Maristela",
-            "telefone": "(47) 99999-1111"
+            "valor": "(47) 99999-1111"
         },
         "endereco": {
             "logradouro": "Rua XPTO",
@@ -42,8 +44,9 @@
         "cpfcnpj": "333.333.333-33",
         "tipo": 1,
         "telefone": {
+            "tipo": 1,
             "nome": "Emerson",
-            "telefone": "(47) 99999-2222"
+            "valor": "(47) 99999-2222"
         },
         "endereco": {
             "logradouro": "Rua XPTO",
@@ -60,8 +63,9 @@
         "cpfcnpj": "444.444.444-44",
         "tipo": 1,
         "telefone": {
+            "tipo": 1,
             "nome": "Natalia",
-            "telefone": "(47) 99999-3333"
+            "valor": "(47) 99999-3333"
         },
         "endereco": {
             "logradouro": "Rua XPTO",

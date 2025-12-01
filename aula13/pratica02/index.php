@@ -24,7 +24,7 @@ function criarPessoa(
 
     $cont = new Contato();
     $cont->setNome($nome);
-    $cont->setTelefone($tel);
+    $cont->setValor($tel);   
 
     $p = new Pessoa();
     $p->setNome($nome);
@@ -43,7 +43,7 @@ $familia = [];
 $familia[] = criarPessoa("Barbara", "Kammer", "2002-09-15", "111.111.111-11", 1, "(47) 99999-0000");
 $familia[] = criarPessoa("Maristela", "Kammer", "1975-05-10", "222.222.222-22", 1, "(47) 99999-1111");
 $familia[] = criarPessoa("Emerson", "Kammer", "1970-09-15", "333.333.333-33", 1, "(47) 99999-2222");
-$familia[] = criarPessoa("Natalia", "Kammer", "2005-03-01", "444.444.444-44", 1, "(47) 99999-3333");
+$familia[] = criarPessoa("Nathalia", "Kammer", "2005-03-01", "444.444.444-44", 1, "(47) 99999-3333");
 
 // montar conteúdo para o TXT
 $conteudo = "";

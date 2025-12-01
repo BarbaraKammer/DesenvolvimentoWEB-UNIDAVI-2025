@@ -7,6 +7,6 @@ Idade: 50
 Nome completo: Emerson Kammer
 Idade: 55
 --------------------------------
-Nome completo: Natalia Kammer
+Nome completo: Nathalia Kammer
 Idade: 20
 --------------------------------

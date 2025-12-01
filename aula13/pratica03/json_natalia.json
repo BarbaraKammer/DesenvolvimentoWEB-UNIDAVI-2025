@@ -5,8 +5,9 @@
     "cpfcnpj": "444.444.444-44",
     "tipo": 1,
     "telefone": {
+        "tipo": 1,
         "nome": "Natalia",
-        "telefone": "(47) 99999-3333"
+        "valor": "(47) 99999-3333"
     },
     "endereco": {
         "logradouro": "Rua XPTO",

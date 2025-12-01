@@ -1,6 +1,9 @@
 <?php
 namespace app\model;
 
+use app\model\Contato;
+use app\model\Endereco;
+
 class Pessoa
 {
     private string $nome;
@@ -71,5 +74,14 @@ class Pessoa
         $hoje = new \DateTime();
         $nasc = new \DateTime($this->dataNascimento);
         return $hoje->diff($nasc)->y;
+    }
+
+    public function inicializaClasse(): void
+    {
+        $this->nome = "";
+        $this->sobrenome = "";
+        $this->dataNascimento = "";
+        $this->cpfcnpj = "";
+        $this->tipo = 0;
     }
 }
