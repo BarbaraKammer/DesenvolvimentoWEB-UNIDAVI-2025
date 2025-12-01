@@ -55,7 +55,7 @@ C:\xampp\htdocs\
 2. Crie o banco:
 
 ```bash
-CREATE DATABASE trabalho_semestral;
+CREATE DATABASE avaliacao;
 ```
 
 3. Execute o script SQL localizado em:
@@ -86,7 +86,7 @@ function db() {
     static $conn;
     if ($conn === null) {
         $conn = new PDO(
-            "pgsql:host=localhost;port=5432;dbname=trabalho_semestral",
+            "pgsql:host=localhost;port=5432;dbname=avaliacao",
             "postgres",     // usuário
             "12345",        // senha
             [
