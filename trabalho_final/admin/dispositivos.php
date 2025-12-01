@@ -10,6 +10,10 @@
   <div class="alert alert-success">Dispositivo adicionado com sucesso!</div>
 <?php endif; ?>
 
+<?php if(isset($_GET["toggle_ok"])): ?>
+  <div class="alert alert-info">Status do dispositivo alterado com sucesso!</div>
+<?php endif; ?>
+
 <form action="dispositivos_salvar.php" method="POST" class="mb-4">
   <input type="text" name="nome" class="form-control mb-2" placeholder="Nome do dispositivo" required>
   <select name="setor_id" class="form-control mb-2" required>

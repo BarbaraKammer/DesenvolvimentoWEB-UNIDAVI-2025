@@ -10,6 +10,10 @@
   <div class="alert alert-success">Setor adicionado com sucesso!</div>
 <?php endif; ?>
 
+<?php if(isset($_GET["toggle_ok"])): ?>
+  <div class="alert alert-info">Status do setor alterado com sucesso!</div>
+<?php endif; ?>
+
 <form action="setores_salvar.php" method="POST" class="mb-4">
   <input type="text" name="nome" class="form-control mb-2" placeholder="Nome do setor" required>
   <button class="btn btn-success">Adicionar</button>

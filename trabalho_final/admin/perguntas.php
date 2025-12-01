@@ -6,8 +6,8 @@
   <div class="alert alert-success">Pergunta atualizada com sucesso!</div>
 <?php endif; ?>
 
-<?php if(isset($_GET["delete_ok"])): ?>
-  <div class="alert alert-danger">Pergunta removida com sucesso!</div>
+<?php if(isset($_GET["toggle_ok"])): ?>
+  <div class="alert alert-info">Status da pergunta alterado com sucesso!</div>
 <?php endif; ?>
 
 <?php if(isset($_GET["add_ok"])): ?>

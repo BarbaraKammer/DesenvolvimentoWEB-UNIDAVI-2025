@@ -9,5 +9,5 @@ if ($id > 0) {
     $stmt->execute(['id' => $id]);
 }
 
-header("Location: dispositivos.php");
+header("Location: dispositivos.php?toggle_ok=1");
 exit;

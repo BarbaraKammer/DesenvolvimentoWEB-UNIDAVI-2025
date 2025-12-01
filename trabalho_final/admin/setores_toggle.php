@@ -17,5 +17,5 @@ if ($id > 0) {
     $stmt2->execute(['id' => $id]);
 }
 
-header("Location: setores.php");
+header("Location: setores.php?toggle_ok=1");
 exit;

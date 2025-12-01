@@ -9,5 +9,6 @@ if ($id > 0) {
     $stmt->execute(['id' => $id]);
 }
 
-header("Location: perguntas.php");
+header("Location: perguntas.php?toggle_ok=1");
+
 exit;
