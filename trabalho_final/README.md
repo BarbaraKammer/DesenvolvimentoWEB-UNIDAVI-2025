@@ -30,7 +30,7 @@ C:\xampp\htdocs\DesenvolvimentoWEB-UNIDAVI-2025\
 5. A pasta final do projeto é:
 
 ```bash
-...\DesenvolvimentoWEB-UNIDAVI-2025\trabalho_semestral\
+...\DesenvolvimentoWEB-UNIDAVI-2025\trabalho_final\
 ```
 🔹 Opção B — Download ZIP
 
@@ -61,7 +61,7 @@ CREATE DATABASE avaliacao;
 3. Execute o script SQL localizado em:
 
 ```bash
-trabalho_semestral/sql/setup.sql
+trabalho_final/sql/setup.sql
 ```
 
 Esse script:
@@ -75,7 +75,7 @@ Esse script:
 1. Abra o arquivo:
 
 ```bash
-trabalho_semestral/functions/db.php
+trabalho_final/functions/db.php
 ```
 
 2. Ajuste conforme o seu ambiente:
@@ -108,7 +108,12 @@ function db() {
 3. Acesse o sistema pelo navegador:
 
 ```bash
-http://localhost/trabalho_semestral/public/index.php
+http://localhost/trabalho_final/public
+```
+ou então:
+
+```bash
+http://localhost/DesenvolvimentoWEB-UNIDAVI-2025/trabalho_final/public
 ```
 
 Acesso ao Painel Administrativo
@@ -122,5 +127,10 @@ admin	admin123
 O painel administrativo está disponível em:
 
 ```bash
-http://localhost/trabalho_semestral/admin/login.php
+http://localhost/trabalho_final/admin/login.php
+```
+ou então:
+
+```bash
+http://localhost/DesenvolvimentoWEB-UNIDAVI-2025/trabalho_final/admin/login.php
 ```
